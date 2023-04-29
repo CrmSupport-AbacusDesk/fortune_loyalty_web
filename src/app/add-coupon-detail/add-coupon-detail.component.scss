@@ -1,10 +1,33 @@
+
+.prnt_brc {
+    text-align: center;
+}
+
+
+
+
 .prnt_prt {
-    display: flex;
-    margin-top: 40px;
+
+   margin-top: 4px !important;
+   border: 2px solid #000;
+   padding-bottom: 10px;
+   position: relative;
+   height: 177px;
+}
+label.hggff {
+    position: absolute;
+    left: -16px;
+    top: 80px;
+    transform: rotate(90deg);
 }
 .prt_txt {
-    margin-top: 15px;
+ 
+    text-align: center;
 }
-.prnt_brc {
-    margin-left: 40px;
+
+.cupns_mr {
+    margin-top: 8px;
+}
+button.prnt_bg {
+    background-color: #00397f !important;
 }
