@@ -52,19 +52,30 @@ export class AddCouponDetailComponent implements OnInit {
           margin-bottom: 0px
         }
         @page { 
-          margin: 0.07in 0.1in 0.00in;  
+          margin: 0.01in 0.10in  0.00in;  
         }
+
+        .aclass.qr_img img {
+          height:55px !important; width:55px !important
+      }
+
+      .qr_img{
+        position: relative;
+        text-align: center;
+        font-size: 0.5rem
+      }
+
+      .qr_img span {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+      .qr_img img {
+        height:55px !important; width:55px !important
+    }
+
         
-        .bar-code-img, .barcode{
-          
-          width:105px !important;
-          min-width:105px !important;
-          height: 110px !important;
-        }
-        .barcode svg{
-          width: 100%;
-          height: 100%;
-        }
+        
         
         body
         {

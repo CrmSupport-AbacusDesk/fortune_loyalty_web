@@ -8662,3 +8662,26 @@ button.grn_btn.mat-button {
     color: red;
 }
 
+// .qr_img img {
+// width: 45px;
+// }
+
+.qr_img img {
+    width: 90% !important;
+}
+.aclass.qr_img img {
+    height:55px !important; width:55px !important
+}
+
+.qr_img{
+  position: relative;
+  text-align: center;
+}
+
+.qr_img span {
+  font-size: 8px;
+  position: absolute;
+//   bottom: -9px;
+  left: 0;
+  z-index: 1;
+}
