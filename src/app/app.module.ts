@@ -24,6 +24,7 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatExpansionModule,
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {MatIconModule} from '@angular/material/icon';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import {MaterialModule} from './material';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HeaderComponent} from './header/header.component';
@@ -115,6 +116,7 @@ import { DigitallistComponent } from './digitallist/digitallist.component';
 import { SystemUserListComponent } from './system-user-list/system-user-list.component';
 import { SystemUserAddComponent } from './system-user-add/system-user-add.component';
 import { DeactiveStatusGiftComponent } from './deactive-status-gift/deactive-status-gift.component';
+import { AddCouponDetailComponent } from './add-coupon-detail/add-coupon-detail.component';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme);
 
@@ -152,6 +154,10 @@ const routes: Routes = [
   {path:'distributor-detail/:distributor_id/:page',component:DistributorDetailComponent,canActivate:[AuthGuard]},
   {path:'distributor-add/:distributor_id',component:DistributorAddComponent,canActivate:[AuthGuard]},
   {path: 'karigar-add', component:KarigarAddComponent , canActivate: [AuthGuard] },
+
+  {path: 'add-coupon-detail', component:AddCouponDetailComponent , canActivate: [AuthGuard] },
+  {path: 'add-coupon-detail/:couponid', component:AddCouponDetailComponent , canActivate: [AuthGuard] },
+
   {path: 'karigar-add/:karigar_id', component:KarigarAddComponent , canActivate: [AuthGuard] },
   {path: 'karigar-detail/:karigar_id',  component:KarigarDetailComponent , canActivate: [AuthGuard] },
   {path: 'karigar-detail/:karigar_id/:page',  component:KarigarDetailComponent , canActivate: [AuthGuard] },
@@ -283,6 +289,7 @@ const routes: Routes = [
     MasterTabComponent,
     UploaddigitalcatComponent,
     DigitallistComponent,
+    AddCouponDetailComponent,
   
 
 
@@ -309,6 +316,7 @@ const routes: Routes = [
     MatExpansionModule,
     FilterPipeModule,
     NgxMatSelectSearchModule,
+    NgxQRCodeModule,
   ],
   providers: [
     AuthGuard,
@@ -348,7 +356,8 @@ const routes: Routes = [
     SendNotificationComponent,
     AssignRelatedProductsComponent,
     ContractorSatusModalComponent,
-    ChangeTypeModalComponent
+    ChangeTypeModalComponent,
+    AddCouponDetailComponent
   ],
   
   exports: [

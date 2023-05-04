@@ -70,7 +70,7 @@
             <div class="row mb0">
               <div class="col s12">
                 <div class="save" >
-                  <button mat-button >Generate</button>
+                  <button mat-button [disabled]="savingData">Generate</button>
                 </div>
               </div>
             </div>
@@ -155,6 +155,10 @@
                 <div class="cs-action">
                   <!-- <a class="ac-green" matTooltip="Edit Remarks" matTooltipPosition="below" 
                   (click)="openModel(val)"><i class="material-icons">edit</i></a> -->
+
+                  <a class="ac-green"  matTooltip="Print" routerLink="/add-coupon-detail/{{val.id}}"   routerLinkActive="active"
+                  ><i class="material-icons">print</i></a>
+
                   <a class="ac-green" matTooltip="Excel Download" matTooltipPosition="below" 
                   (click)="downloadCoupon(val.id)"><i class="material-icons">cloud_download</i></a>
                   <a class="ac-red" matTooltip="Delete" matTooltipPosition="below" 
