@@ -22,6 +22,7 @@ export class VideoComponent implements OnInit {
   total_vedios:any = 0;
   vedios:any =[];
 
+
   constructor(public db: DatabaseService, private route: ActivatedRoute, private router: Router, public ses: SessionStorage,
     public dialog: DialogComponent,public alrt:MatDialog) {}
 
@@ -48,6 +49,11 @@ export class VideoComponent implements OnInit {
     this.getVedioList('');
   }
   toggle:any;
+
+
+
+
+
   saveVedio(form:any) {
     this.savingData = true;
     if(this.vedios.id){
@@ -64,7 +70,12 @@ export class VideoComponent implements OnInit {
       }
       this.toggle = "false"
       this.router.navigate(['video-list']);
-      this.dialog.success( 'video successfully save');
+      if(this.vedioForm.id){
+        this.dialog.success( 'video successfully update');
+      }
+      else{
+        this.dialog.success( 'video successfully save');
+      }
       this.getVedioList('');
     });
   }

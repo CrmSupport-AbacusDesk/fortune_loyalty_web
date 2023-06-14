@@ -26,8 +26,8 @@
         <div id='qr_code_container' >
           <div style="height:76.8px; width:288px; border-radius: 10px;display: grid;grid-template-columns: 1fr 1fr 1fr;">
             <div class="qr_img" *ngFor="let row of print_coupon" style="width: 96px; height: 76.8px;">
-              <ngx-qrcode [elementType]="elementType" value="{{row.coupon_code}}" cssClass="aclass qr_img" errorCorrectionLevel="L">
-              </ngx-qrcode>
+              <!-- <ngx-qrcode [elementType]="elementType" value="{{row.coupon_code}}" cssClass="aclass qr_img" errorCorrectionLevel="L">
+              </ngx-qrcode> -->
               <label style="position: absolute;left: 0px;
               top: 22px;
               -webkit-transform: rotate(-90deg);
@@ -51,8 +51,8 @@
             <div class="prnt_brc">
               
               <div>
-                <ngx-qrcode [elementType]="elementType" value="{{row.coupon_code}}" cssClass="aclass" errorCorrectionLevel="L">
-                </ngx-qrcode>
+                <!-- <ngx-qrcode [elementType]="elementType" value="{{row.coupon_code}}" cssClass="aclass" errorCorrectionLevel="L">
+                </ngx-qrcode> -->
               </div>
             </div>
             
