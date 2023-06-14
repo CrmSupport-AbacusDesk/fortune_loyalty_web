@@ -15,8 +15,28 @@
                     </i>
                 </div>
             </div>
+          
+
             <div class="refresh-btn">
                 <a mat-button matTooltip="Refresh" matTooltipPosition="below" (click)="getVedioList('refresh')"><i class="material-icons">refresh</i></a>
+            </div>
+            <div class="top-pagination">
+                <ul>
+                    <li>
+                        <p>Pages {{ current_page }} of {{ last_page }}</p>
+                    </li>
+                    <li>
+                        <button mat-button class="left-btn" (click)='redirect_previous()'>
+                            <i class="material-icons">keyboard_arrow_left</i>
+                        </button>
+                    </li>
+                    <li><input type="text" placeholder="GO TO" [(ngModel)]="current_page"></li>
+                    <li>
+                        <button mat-button class="right-btn" (click)='redirect_next()'>
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
